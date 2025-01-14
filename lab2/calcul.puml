@@ -1,0 +1,42 @@
+@startuml
+
+start
+
+:Check if vectors have the same length;
+if (Vectors have same length?) then (yes)
+    :Initialize result vector;
+    :Initialize scalar_result to 0;
+
+    :Check operation type;
+    if (Operation == VV_SUM) then (yes)
+        :For each element in vectors;
+        :Add corresponding elements;
+        :Add result to result vector;
+    else (no)
+        if (Operation == VV_SUB) then (yes)
+            :For each element in vectors;
+            :Subtract corresponding elements;
+            :Add result to result vector;
+        else (no)
+            if (Operation == VV_SCALAR) then (yes)
+                :For each element in vectors;
+                :Multiply corresponding elements;
+                :Add to scalar_result;
+                :Add scalar_result to the result vector;
+            else (no)
+                :Print error message;
+                :Return empty result;
+            endif
+        endif
+    endif
+
+else (no)
+    :Print error message;
+    :Return empty result;
+endif
+
+:Return result;
+
+stop
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+start
+
+:Call ReadVectorFromFile(file1);
+:Call ReadVectorFromFile(file2);
+:Check vector lengths;
+if (Vectors have same length?) then (yes)
+    :Set parameters.operation;
+else (no)
+    :Print error message;
+endif
+
+:Return CalcProblemParams;
+
+stop
+
+@enduml

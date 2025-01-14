@@ -1,0 +1,12 @@
+@startuml
+
+start
+
+:Initialize file names and output file;
+:Call Init(file1, file2, operation);
+:Call Calc(params);
+:Call Export(result, output_file);
+
+stop
+
+@enduml

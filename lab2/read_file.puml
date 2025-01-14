@@ -1,0 +1,19 @@
+@startuml
+
+start
+
+:Open file;
+if (File opened successfully?) then (yes)
+    :Read each line;
+    :Parse numbers;
+    :Add numbers to vector;
+else (no)
+    :Print error message;
+endif
+
+:Close file;
+:Return vector;
+
+stop
+
+@enduml
